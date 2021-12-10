@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Ernesto Bernardo bottom_nav_menu.xml-->
+    <!-- general XML layout/shell generated from Android Studio file template-->
+    <!-- items created with template. title and icon attributes changed by Ernesto Bernardo-->
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_album"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_user_male_circle"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="?android:attr/actionModeWebSearchDrawable"
+        android:title="@string/title_notifications" />
+
+</menu>

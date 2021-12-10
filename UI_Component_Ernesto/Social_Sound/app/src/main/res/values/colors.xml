@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ernesto Bernardo colors.xml-->
+    <!-- File and contents generated from Android Studio file template-->
+    <!-- color values changed by Ernesto Bernardo-->
+    <color name="purple_200">#a6c5f7</color>
+    <color name="purple_500">#65a7ed</color>
+    <color name="purple_700">#005394</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
