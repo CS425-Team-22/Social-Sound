@@ -1,9 +1,0 @@
-<resources>
-    <!-- Ernesto Bernardo strings.xml-->
-    <!-- File and contents generated from Android Studio file template-->
-    <!-- no values changed by Ernesto Bernardo-->
-    <string name="app_name">Social Sound</string>
-    <string name="title_home">Sound Space</string>
-    <string name="title_dashboard">Profile</string>
-    <string name="title_notifications">Search</string>
-</resources>

@@ -1,8 +1,0 @@
-<resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <!-- Ernesto Bernardo dimens.xml-->
-    <!-- File and contents generated from Android Studio file template-->
-    <!-- no values changed by Ernesto Bernardo-->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-</resources>
