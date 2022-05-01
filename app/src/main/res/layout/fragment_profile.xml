@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offWhite">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewProfilePicture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textViewUsername"
+        android:textColor="@color/blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePicture" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Log out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="is listening to"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUsername" />
+
+    <ImageView
+        android:id="@+id/imageViewTrackImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/black"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/textViewTrackName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textViewTrackName"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTrackImage" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="at the location"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTrackArtist" />
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="[0,0]"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/buttonSettings"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Settings"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTrackArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textViewTrackArtist"
+        android:textColor="@color/blue"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTrackName" />
+
+    <Button
+        android:id="@+id/buttonLikedSongs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Liked Songs"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offWhite"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonPlayer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:text="Player"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_play"
+        app:iconGravity="top"
+        app:iconPadding="0dp"
+        app:iconSize="20dp"
+        app:iconTint="@color/offWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonSounds" />
+
+    <Button
+        android:id="@+id/buttonProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:text="Profile"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_circle_user_solid"
+        app:iconGravity="top"
+        app:iconPadding="0dp"
+        app:iconSize="20dp"
+        app:iconTint="@color/offWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSounds"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSounds"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:text="Sounds"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_music_solid"
+        app:iconGravity="top"
+        app:iconPadding="0dp"
+        app:iconSize="20dp"
+        app:iconTint="@color/offWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlayer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonProfile" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/buttonProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout="@layout/fragment_login" />
+</androidx.constraintlayout.widget.ConstraintLayout>
