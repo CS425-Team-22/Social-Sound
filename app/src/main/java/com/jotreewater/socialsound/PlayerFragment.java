@@ -58,7 +58,8 @@ public class PlayerFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         main = (MainActivity) getActivity();
-
+        
+        // Assign buttons to their correct views
         play = getActivity().findViewById(R.id.play_pause_button);
         skip = getActivity().findViewById(R.id.skip_next_button);
         rewind = getActivity().findViewById(R.id.skip_prev_button);
@@ -69,6 +70,7 @@ public class PlayerFragment extends Fragment {
         progressBar = getActivity().findViewById(R.id.seekBar);
         openSpotify = getActivity().findViewById(R.id.spotifyButton);
 
+        // Create onClickListeners for each button that is displayed on the Player Fragment
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,7 +81,7 @@ public class PlayerFragment extends Fragment {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                skipThread skip = new skipThread();
+                skipThread skip = new skipThread(); // Starts a separate thread to track the progress bar for new song
                 skip.start();
             }
         });
@@ -87,7 +89,7 @@ public class PlayerFragment extends Fragment {
         rewind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rewindThread rewind = new rewindThread();
+                rewindThread rewind = new rewindThread();   // Starts thread to rewind progresss bar on rewind
                 rewind.start();
             }
         });
@@ -279,6 +281,7 @@ public class PlayerFragment extends Fragment {
                 );
     }
 
+    // Starts the progress bar at 0 for a track and sets the bar max length to the duration of a track
     private void initializeProgressBar() {
         main.mainSpotifyAppRemote.getPlayerApi().subscribeToPlayerState().setEventCallback(playerState -> {
             if (playerState.track != null) {
@@ -291,6 +294,7 @@ public class PlayerFragment extends Fragment {
         });
     }
 
+    // Thread class used to initialize and track progress bar throughout a song
     public class seekbarThread extends Thread {
         public void run() {
             while (position < progressBar.getMax())
@@ -312,12 +316,14 @@ public class PlayerFragment extends Fragment {
         }
     }
 
+    // Thread class used to fix progress bar for a song change
     public class skipThread extends Thread {
         public void run() {
             onSkipNextButtonClicked();
         }
     }
-
+    
+    // Thread class used to fix progress bar for a song change
     public class rewindThread extends Thread {
         public void run() {
             onSkipPreviousButtonClicked();
